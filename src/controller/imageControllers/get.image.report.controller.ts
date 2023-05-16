@@ -2,7 +2,14 @@ import Image from "../../model/image.model";
 import RouteParamsHandler from "../../types/routeParams.type";
 import CustomErrorHandler from "../../utils/ErrorHandler/custom.errorHandler";
 
-
+/**
+ * @async
+ * @function getImageReport - Retrieves image report from the database and sends it as a response.
+ * @param {Request} req - The request object.
+ * @param {Response} res - The response object.
+ * @param {NextFunction} next - The next middleware function.
+ * @returns {Promise<void>} A Promise that resolves once the response is sent or an error occurs.
+ */
 const getImageReport: RouteParamsHandler = async (req, res, next) => {
   try {
     // Get all images from the database

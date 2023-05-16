@@ -48,9 +48,6 @@ const getImage: RouteParamsHandler = async (req, res, next) => {
           size: [imageWidth || 612, imageHeight || 792],
         });
 
-        // Add a blank page
-        // pdfDoc.addPage();
-
         // Embed the image in the PDF document
         pdfDoc.image(imageBuffer, 0, 0, {
           width: imageWidth,

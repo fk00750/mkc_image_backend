@@ -19,9 +19,11 @@ The Mkc Image Link Generator provides the following API endpoints:
 This endpoint accepts a POST request with an image file in the multipart/form-data format. The following request body parameters are required:
 
     - `use`: The intended use of the image.
+
 The following request body parameter is optional:
 
     - `format (optional)`: The desired image format. If not provided, the original format will be used.
+
 The endpoint returns a JSON response with the following properties:
 
 The endpoint returns a JSON response with the following properties:
@@ -48,6 +50,8 @@ This endpoint accepts a GET request and returns a list of all uploaded images in
     "imageId": "imageId",
     "imageFormat": "imageFormat",
     "imageLink": "imageLink",
+    dimension:imageDimension,
+    size: imageSize,
     "use": "use",
     "fieldname": "fieldname",
     "originalname": "originalname",
@@ -58,7 +62,7 @@ This endpoint accepts a GET request and returns a list of all uploaded images in
 ]
 ```
 
-## Tech Stack 
+## Tech Stack
 
 The Mkc Image Link Generator is built using the following technologies:
 
